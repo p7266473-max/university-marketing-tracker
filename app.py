@@ -19,7 +19,7 @@ st.title("🎓 University Staff Marketing Campaign Tracker")
 st.markdown("**Weekly social media tracking across Facebook, Instagram, Telegram, WhatsApp, and LinkedIn.**")
 st.divider()
 
-STAFF = ["Dr. Sarah Ahmed", "Prof. James Lim", "Ms. Priya Nair", "Mr. David Osei", "Dr. Layla Hassan", "Mr. Kevin Tan"]
+STAFF = ["Prof. Dr. Asif M Karim", "Mrs. Gurvinder", "Mr. Muhammed Irfan A", "Ms. Rozmania", "Ms Leeni", "Mr SK", "Ms Nurul Fatiha", "Mrs. Vani", "Mr Jegen"]
 PLATFORMS = ["Facebook", "Instagram", "Telegram", "WhatsApp", "LinkedIn"]
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 STATUS_OPTS = ["✅ Posted", "⏳ Scheduled", "❌ Missed"]
