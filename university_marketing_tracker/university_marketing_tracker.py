@@ -173,7 +173,7 @@ def desktop_tracker():
         rx.vstack(
             rx.heading("Marketing Activity Tracker", size="6", color=PRIMARY_NAVY),
             rx.text(State.week_dates, size="4", color=GOLD_ACCENT, weight="medium", margin_bottom="1em"),
-            rx.select(["Week 1", "Week 2", "Combined"], value=State.selected_week, on_change=State.set_selected_week),
+            rx.select(["Week 1", "Week 2"], value=State.selected_week, on_change=State.set_selected_week),
             rx.box(
                 rx.table.root(
                     rx.table.header(rx.table.row(rx.table.column_header_cell("Staff"), rx.table.column_header_cell("FB"), rx.table.column_header_cell("LinkedIn"), rx.table.column_header_cell("Telegram"), rx.table.column_header_cell("WA Status"), rx.table.column_header_cell("WA Group"), rx.table.column_header_cell("Instagram"), rx.table.column_header_cell("Remarks"))),
