@@ -154,14 +154,42 @@ with tab2:
     st.subheader(f"Activity Table ({selected_week})")
     st.dataframe(display_df.drop(columns=["Post Count"]), use_container_width=True)
     
+import plotly.express as px
+
+# ... (rest of the file remains the same until the performance overview section)
+
+with tab2:
+    selected_week = st.selectbox("Select Week", ["Combined", "Week 1", "Week 2"])
+    
+    if selected_week != "Combined":
+        display_df = df[df["Week"] == selected_week]
+    else:
+        display_df = df
+        
+    st.subheader(f"Activity Table ({selected_week})")
+    st.dataframe(display_df.drop(columns=["Post Count"]), use_container_width=True)
+    
     st.divider()
     st.subheader(f"Performance Overview ({selected_week})")
+    
     # Plot using aggregated data if 'Combined', else use filtered data
     if selected_week == "Combined":
         chart_data = df.groupby("Staff Name")["Post Count"].sum().reindex(STAFF_LIST)
     else:
         chart_data = display_df.groupby("Staff Name")["Post Count"].sum().reindex(STAFF_LIST)
-    st.bar_chart(chart_data)
+    
+    # Use Plotly for a static chart
+    fig = px.bar(chart_data, orientation='v', text_auto=True)
+    fig.update_layout(
+        xaxis_title="Staff Name",
+        yaxis_title="Post Count",
+        showlegend=False,
+        dragmode=False  # Disable dragging/zooming
+    )
+    fig.update_xaxes(fixedrange=True) # Disable scrolling/zooming
+    fig.update_yaxes(fixedrange=True)
+    
+    st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
 
 st.divider()
 st.caption("University Marketing Campaign Tracker • Streamlit")
