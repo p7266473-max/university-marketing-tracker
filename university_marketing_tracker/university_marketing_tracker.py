@@ -224,7 +224,6 @@ def static_mobile_performance():
         rx.vstack(
             rx.heading("Performance Overview", size="5", color=PRIMARY_NAVY),
             rx.text(State.week_dates, size="2", color=GOLD_ACCENT, weight="bold"),
-            rx.text("Static performance breakdown for mobile stability.", size="1", color=TEXT_MOBILE),
             rx.scroll_area(
                 rx.vstack(
                     rx.foreach(
