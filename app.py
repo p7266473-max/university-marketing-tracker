@@ -53,7 +53,7 @@ st.set_page_config(
 data = [
     {"Staff Name": "Dato' Gilbert", "FB": "17th (PhD(ODL))", "LinkedIn": "17th (PhD(ODL))", "Telegram": "-", "WhatsApp Status": "17th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "17th (PhD(ODL))", "Remarks": "-"},
     {"Staff Name": "Mr Uthia Kumar Subramany", "FB": "-", "LinkedIn": "17th (PhD(ODL))", "Telegram": "-", "WhatsApp Status": "17th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
-    {"Staff Name": "Prof. Dr. Asif M Karim", "FB": "-", "LinkedIn": "17th, 18th (Exec MBA, PhD(ODL), Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "17th, 18th (Exec MBA, PhD(ODL), Prem MBA, Prem MSc ITM)", "WhatsApp Group": "17th, 18th (DBA RM, SL, PDC AI 1, 2, 3)", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Prof. Dr. Asif M Karim", "FB": "17th (PhD)", "LinkedIn": "17th, 18th (Exec MBA, PhD, Prem MBA, Prem MSc ITM)", "Telegram": "18th (PhD)", "WhatsApp Status": "17th, 18th (Exec MBA, PhD, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "17th, 18th (DBA RM, SL, PDC AI 1, 2, 3)", "Instagram": "-", "Remarks": "ResearchGate: 17th (Article)"},
     {"Staff Name": "Mrs. Gurvinder", "FB": "-", "LinkedIn": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     {"Staff Name": "Mr. Muhammed Irfan A", "FB": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "LinkedIn": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     {"Staff Name": "Ms. Rozmania", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
@@ -67,7 +67,7 @@ data = [
 df = pd.DataFrame(data)
 
 # Calculate post counts for graph
-platform_cols = ["FB", "LinkedIn", "Telegram", "WhatsApp Status", "WhatsApp Group", "Instagram"]
+platform_cols = ["FB", "LinkedIn", "Telegram", "WhatsApp Status", "WhatsApp Group", "Instagram", "Remarks"]
 df["Post Count"] = df[platform_cols].apply(lambda row: row.apply(lambda x: 1 if x != "-" else 0).sum(), axis=1)
 
 # Tabs
