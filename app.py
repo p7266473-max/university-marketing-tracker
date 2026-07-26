@@ -146,10 +146,10 @@ with tab2:
     st.dataframe(display_df.drop(columns=["Post Count"]), use_container_width=True)
     
     st.divider()
-    st.subheader("Performance Overview")
-    # Aggregated post counts per staff
-    agg_df = df.groupby("Staff Name")["Post Count"].sum().reindex(STAFF_LIST)
-    st.bar_chart(agg_df)
+    st.subheader(f"Performance Overview ({selected_week})")
+    # Plot using the filtered dataframe for the selected week
+    chart_data = display_df.groupby("Staff Name")["Post Count"].sum().reindex(STAFF_LIST)
+    st.bar_chart(chart_data)
 
 st.divider()
 st.caption("University Marketing Campaign Tracker • Streamlit")
