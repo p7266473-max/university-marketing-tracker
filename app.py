@@ -1,17 +1,14 @@
 import streamlit as st
 import pandas as pd
 
+# Set page config
 st.set_page_config(
-    page_title="University Marketing Campaign Tracker - Week 1",
+    page_title="University Staff Portal",
     page_icon="🎓",
     layout="wide",
 )
 
-st.title("🎓 University Staff Marketing Campaign Tracker (Week 1: July 17-18)")
-st.markdown("**Weekly social media tracking for staff.**")
-st.divider()
-
-# Data provided by user
+# Data
 data = [
     {"Staff Name": "Dato' Gilbert", "FB": "17th (PhD(ODL))", "LinkedIn": "17th (PhD(ODL))", "Telegram": "-", "WhatsApp Status": "17th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "17th (PhD(ODL))", "Remarks": "-"},
     {"Staff Name": "Mr Uthia Kumar Subramany", "FB": "-", "LinkedIn": "17th (PhD(ODL))", "Telegram": "-", "WhatsApp Status": "17th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
@@ -28,8 +25,37 @@ data = [
 
 df = pd.DataFrame(data)
 
-st.subheader("Week 1 Activity Table")
-st.dataframe(df, use_container_width=True)
+# Calculate post counts for graph
+platform_cols = ["FB", "LinkedIn", "Telegram", "WhatsApp Status", "WhatsApp Group", "Instagram"]
+df["Post Count"] = df[platform_cols].apply(lambda row: row.apply(lambda x: 1 if x != "-" else 0).sum(), axis=1)
+
+# Tabs
+tab1, tab2 = st.tabs(["🏠 Home", "📊 Marketing Tracker"])
+
+with tab1:
+    st.title("🎓 Welcome, Valued Staff")
+    st.write("---")
+    st.subheader("Your Impact Matters")
+    st.write("""
+    Thank you for your dedication to Binary University. As representatives of Asia's Most Exclusive University, 
+    your efforts in sharing our vision of producing 'Outstanding Talents' are invaluable. 
+    
+    **Remember to emphasize:**
+    *   **Elite Education:** Specialized DBA, PhD, MBA, and MSc programs.
+    *   **Measurable Outcomes:** We focus on career readiness and premium industry placement.
+    *   **Research Excellence:** Our 8 Research Centres of Excellence drive innovation.
+    
+    You are key to our mission of nurturing industry leaders. Keep up the great work!
+    """)
+
+with tab2:
+    st.subheader("Week 1 Activity Table (July 17-18)")
+    st.dataframe(df.drop(columns=["Post Count"]), use_container_width=True)
+    
+    st.divider()
+    st.subheader("Performance Overview")
+    chart_data = df[["Staff Name", "Post Count"]].set_index("Staff Name")
+    st.bar_chart(chart_data)
 
 st.divider()
 st.caption("University Marketing Campaign Tracker • Streamlit")
