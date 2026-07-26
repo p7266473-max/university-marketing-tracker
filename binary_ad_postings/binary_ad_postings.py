@@ -82,7 +82,7 @@ class State(rx.State):
             staff_counts[staff] = staff_counts.get(staff, 0) + posts
         df = pd.DataFrame({"Staff Name": list(staff_counts.keys()), "Total Posts": list(staff_counts.values())})
         fig = px.bar(df, x="Staff Name", y="Total Posts", title=f"{self.selected_week} ({self.week_dates})", color_discrete_sequence=[ROYAL_BLUE])
-        fig.update_layout(plot_bgcolor=LIGHT_BG, paper_bgcolor=WHITE, font_family="Inter", margin=dict(t=40, b=40, l=40, r=40))
+        fig.update_layout(plot_bgcolor=LIGHT_BG, paper_bgcolor=WHITE, font_family="Inter", margin=dict(t=40, b=40, l=40, r=40), yaxis=dict(showticklabels=False), yaxis_title=None)
         return fig
 
     @rx.var
@@ -94,7 +94,7 @@ class State(rx.State):
             for col in ["FB", "LinkedIn", "Telegram", "WhatsApp Status", "WhatsApp Group", "Instagram"]:
                 posts += count_posts_in_string(entry[col])
             width_val = f"{(posts * 10)}%" if posts > 0 else "4px"
-            perf.append({"name": entry["Staff Name"], "count": str(posts), "bar_width": width_val})
+            perf.append({"name": entry["Staff Name"], "bar_width": width_val})
         return perf
 
 # --- UI Components ---
@@ -232,7 +232,6 @@ def static_mobile_performance():
                             rx.hstack(
                                 rx.text(item["name"], size="1", weight="bold", color=TEXT_MOBILE),
                                 rx.spacer(),
-                                rx.text(item["count"], size="1", color=TEXT_MOBILE),
                                 width="100%",
                             ),
                             rx.box(
