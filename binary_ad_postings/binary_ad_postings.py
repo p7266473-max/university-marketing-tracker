@@ -81,19 +81,30 @@ class State(rx.State):
                 posts += count_posts_in_string(entry[col])
             staff_counts[staff] = staff_counts.get(staff, 0) + posts
         df = pd.DataFrame({"Staff Name": list(staff_counts.keys()), "Total Posts": list(staff_counts.values())})
-        fig = px.bar(df, x="Staff Name", y="Total Posts", title=f"{self.selected_week} ({self.week_dates})", color_discrete_sequence=[ROYAL_BLUE])
+        fig = px.bar(df, x="Staff Name", y="Total Posts", title=f"{self.selected_week} ({self.week_dates})", color_discrete_sequence=[ROYAL_BLUE], hover_data={"Total Posts": False})
         fig.update_layout(plot_bgcolor=LIGHT_BG, paper_bgcolor=WHITE, font_family="Inter", margin=dict(t=40, b=40, l=40, r=40), yaxis=dict(showticklabels=False), yaxis_title=None)
+        fig.update_traces(hovertemplate="%{x}<extra></extra>")
         return fig
 
     @rx.var
     def get_performance_list(self) -> list[dict]:
         data = self.get_data
         perf = []
+        max_posts = 0
+        # First pass to find max
         for entry in data:
             posts = 0
             for col in ["FB", "LinkedIn", "Telegram", "WhatsApp Status", "WhatsApp Group", "Instagram"]:
                 posts += count_posts_in_string(entry[col])
-            width_val = f"{(posts * 10)}%" if posts > 0 else "4px"
+            if posts > max_posts: max_posts = posts
+        
+        # Second pass to normalize
+        for entry in data:
+            posts = 0
+            for col in ["FB", "LinkedIn", "Telegram", "WhatsApp Status", "WhatsApp Group", "Instagram"]:
+                posts += count_posts_in_string(entry[col])
+            # Normalize to 100% based on max_posts, ensure min width
+            width_val = f"{((posts / max_posts) * 100) if max_posts > 0 else 0}%" if posts > 0 else "4px"
             perf.append({"name": entry["Staff Name"], "bar_width": width_val})
         return perf
 
