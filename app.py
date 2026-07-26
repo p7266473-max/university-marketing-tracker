@@ -1,84 +1,35 @@
 import streamlit as st
 import pandas as pd
-import random
 
 st.set_page_config(
-    page_title="University Marketing Campaign Tracker",
+    page_title="University Marketing Campaign Tracker - Week 1",
     page_icon="🎓",
     layout="wide",
 )
 
-st.markdown('''
-<style>
-thead tr th { background: linear-gradient(135deg, #6c63ff, #3b82f6) !important; color: white !important; }
-tbody tr:hover td { background: rgba(99,102,241,0.15) !important; }
-</style>
-''', unsafe_allow_html=True)
-
-st.title("🎓 University Staff Marketing Campaign Tracker")
-st.markdown("**Weekly social media tracking across Facebook, Instagram, Telegram, WhatsApp, and LinkedIn.**")
+st.title("🎓 University Staff Marketing Campaign Tracker (Week 1: July 17-18)")
+st.markdown("**Weekly social media tracking for staff.**")
 st.divider()
 
-STAFF = ["Prof. Dr. Asif M Karim", "Mrs. Gurvinder", "Mr. Muhammed Irfan A", "Ms. Rozmania", "Ms Leeni", "Mr SK", "Ms Nurul Fatiha", "Mrs. Vani", "Mr Jegen"]
-PLATFORMS = ["Facebook", "Instagram", "Telegram", "WhatsApp", "LinkedIn"]
-DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-STATUS_OPTS = ["✅ Posted", "⏳ Scheduled", "❌ Missed"]
+# Data provided by user
+data = [
+    {"Staff Name": "Dato' Gilbert", "FB": "17th (PhD(ODL))", "LinkedIn": "17th (PhD(ODL))", "Telegram": "-", "WhatsApp Status": "17th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "17th (PhD(ODL))", "Remarks": "-"},
+    {"Staff Name": "Mr Uthia Kumar Subramany", "FB": "-", "LinkedIn": "17th (PhD(ODL))", "Telegram": "-", "WhatsApp Status": "17th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Prof. Dr. Asif M Karim", "FB": "-", "LinkedIn": "17th, 18th (Exec MBA, PhD(ODL), Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "17th, 18th (Exec MBA, PhD(ODL), Prem MBA, Prem MSc ITM)", "WhatsApp Group": "17th, 18th (DBA RM, SL, PDC AI 1, 2, 3)", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mrs. Gurvinder", "FB": "-", "LinkedIn": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mr. Muhammed Irfan A", "FB": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "LinkedIn": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Ms. Rozmania", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Ms Leeni", "FB": "17th, 18th (Exec MBA, PhD(ODL), Prem MBA, Prem MSc ITM)", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mr SK", "FB": "18th (PhD(ODL))", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Ms Nurul Fatiha", "FB": "18th (Exec MBA, PhD(ODL))", "LinkedIn": "18th (Exec MBA, PhD(ODL), Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mrs. Vani", "FB": "18th (Exec MBA)", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mr Jegen", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+]
 
-if "df" not in st.session_state:
-    rows = []
-    for staff in STAFF:
-        for day in DAYS[:5]:
-            platform = random.choice(PLATFORMS)
-            rows.append({
-                "Staff Name": staff,
-                "Day": day,
-                "Platform": platform,
-                "Post Topic": f"{platform} campaign by {staff.split()[1]}",
-                "Status": random.choice(STATUS_OPTS),
-            })
-    st.session_state.df = pd.DataFrame(rows)
+df = pd.DataFrame(data)
 
-df = st.session_state.df
-
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("👥 Total Staff", len(STAFF))
-col2.metric("📊 Total Posts", len(df))
-col3.metric("✅ Posted", len(df[df["Status"] == "✅ Posted"]))
-col4.metric("❌ Missed", len(df[df["Status"] == "❌ Missed"]))
+st.subheader("Week 1 Activity Table")
+st.dataframe(df, use_container_width=True)
 
 st.divider()
-
-tab1, tab2, tab3, tab4 = st.tabs(["📋 Weekly Activity Log", "👤 By Staff Member", "📱 Platform Breakdown", "➕ Log New Post"])
-
-with tab1:
-    st.subheader("Weekly Activity Schedule")
-    st.dataframe(df, use_container_width=True, height=400)
-
-with tab2:
-    st.subheader("Staff Reports")
-    selected_staff = st.selectbox("Select Staff Member", df["Staff Name"].unique())
-    staff_df = df[df["Staff Name"] == selected_staff]
-    st.metric("Total Posts Logged", len(staff_df))
-    st.dataframe(staff_df, use_container_width=True)
-
-with tab3:
-    st.subheader("Platform Distribution")
-    p_counts = df["Platform"].value_counts().reset_index()
-    p_counts.columns = ["Platform", "Count"]
-    st.bar_chart(p_counts.set_index("Platform"))
-
-with tab4:
-    st.subheader("Log New Campaign Post")
-    with st.form("new_post"):
-        s_name = st.selectbox("Staff Name", STAFF)
-        plat = st.selectbox("Platform", PLATFORMS)
-        d_day = st.selectbox("Day", DAYS)
-        topic = st.text_input("Post Topic")
-        stat = st.selectbox("Status", STATUS_OPTS)
-        if st.form_submit_button("📌 Submit Post") and topic:
-            new_r = pd.DataFrame([{"Staff Name": s_name, "Day": d_day, "Platform": plat, "Post Topic": topic, "Status": stat}])
-            st.session_state.df = pd.concat([st.session_state.df, new_r], ignore_index=True)
-            st.success(f"Logged post for {s_name} on {plat}!")
-
-st.divider()
-st.caption("University Marketing Campaign Tracker • Streamlit • AGY2")
+st.caption("University Marketing Campaign Tracker • Streamlit")
