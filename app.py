@@ -47,9 +47,7 @@ st.set_page_config(
     layout="wide",
 )
 
-# ... (data and processing remain the same)
-
-# Data
+# Data - Ordered as provided
 data = [
     {"Staff Name": "Dato' Gilbert", "FB": "17th (PhD(ODL))", "LinkedIn": "17th (PhD(ODL))", "Telegram": "-", "WhatsApp Status": "17th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "17th (PhD(ODL))", "Remarks": "-"},
     {"Staff Name": "Mr Uthia Kumar Subramany", "FB": "-", "LinkedIn": "17th (PhD(ODL))", "Telegram": "-", "WhatsApp Status": "17th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
@@ -105,11 +103,13 @@ with tab1:
 
 with tab2:
     st.subheader("Week 1 Activity Table (July 17-18)")
+    # Maintain original order
     st.dataframe(df.drop(columns=["Post Count"]), use_container_width=True)
     
     st.divider()
     st.subheader("Performance Overview")
     chart_data = df[["Staff Name", "Post Count"]].set_index("Staff Name")
+    # This will naturally respect the order in the dataframe
     st.bar_chart(chart_data)
 
 st.divider()
