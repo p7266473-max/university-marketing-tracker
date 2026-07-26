@@ -117,11 +117,20 @@ with tab1:
     *   **Flagship Premium MBA:** Designed to give leaders a competitive edge with a curriculum that blends leadership, innovation, and global industry requirements.
 
     ### ✨ Our 5 Premier USPs
-    1. **Industry-Relevant Curriculum:** Constantly updated to meet global market demands.
-    2. **Entrepreneurship Focus:** Entrepreneurial skills are embedded into our postgraduate DNA.
-    3. **Global Alumni Network:** Access to industry leaders worldwide.
-    4. **Research-Driven:** Deep academic insight through our specialized centres.
-    5. **Exclusive Environment:** Small class sizes foster high-level networking.
+    1. **ISP: Industry Specialist Professionals**
+       - Description: Acquisition of deep, industry-specific skills from over 1280 Faculty of Industry Professionals transforming students into highly demanded Talents.
+
+    2. **BEE: Binary Entrepreneurship Ecosystem thro' ACE**
+       - Description: Creating Entrepreneurial Mindset Professionals with innovative problem solving and creative thinking skills nurtured through the Asia Centre for Entrepreneurship (ACE) which has over 10,500 real entrepreneurs.
+
+    3. **WOCA: The World Is Our Campus**
+       - Description: Curated study-abroad experience at another world-class university in Asia to open more career opportunities.
+
+    4. **LII: Learning In Industry**
+       - Description: True mastery happens beyond classrooms. Thro's LII, students meet leaders and shapers of industries. Real-world insights through industry visits and CEO engagements.
+
+    5. **BTI: Guaranteed Internships with Premium Allowance**
+       - Description: Guaranteed allowance of 300% higher than other universities ( RM 3000 for Masters & RM 2000 for Bachelors).
 
     ### 🔬 8 Centres of Research Excellence
     *   Centre for Artificial Intelligence and Data Analytics (CAIDA)
