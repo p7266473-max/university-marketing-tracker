@@ -81,7 +81,7 @@ class State(rx.State):
                 posts += count_posts_in_string(entry[col])
             staff_counts[staff] = staff_counts.get(staff, 0) + posts
         df = pd.DataFrame({"Staff Name": list(staff_counts.keys()), "Total Posts": list(staff_counts.values())})
-        fig = px.bar(df, x="Staff Name", y="Total Posts", title=f"Posts - {self.selected_week} ({self.week_dates})", color_discrete_sequence=[ROYAL_BLUE])
+        fig = px.bar(df, x="Staff Name", y="Total Posts", title=f"{self.selected_week} ({self.week_dates})", color_discrete_sequence=[ROYAL_BLUE])
         fig.update_layout(plot_bgcolor=LIGHT_BG, paper_bgcolor=WHITE, font_family="Inter", margin=dict(t=40, b=40, l=40, r=40))
         return fig
 
