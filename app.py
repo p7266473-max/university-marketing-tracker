@@ -108,9 +108,8 @@ with tab2:
     
     st.divider()
     st.subheader("Performance Overview")
-    chart_data = df[["Staff Name", "Post Count"]].set_index("Staff Name")
-    # This will naturally respect the order in the dataframe
-    st.bar_chart(chart_data)
+    # Plot directly from the ordered dataframe to ensure order is maintained
+    st.bar_chart(df.set_index("Staff Name")["Post Count"])
 
 st.divider()
 st.caption("University Marketing Campaign Tracker • Streamlit")
