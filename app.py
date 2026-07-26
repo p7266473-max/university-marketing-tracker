@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 # Add nostalgic styling
 st.markdown("""
@@ -144,22 +145,7 @@ with tab1:
     """)
 
 with tab2:
-    selected_week = st.selectbox("Select Week", ["Combined", "Week 1", "Week 2"])
-    
-    if selected_week != "Combined":
-        display_df = df[df["Week"] == selected_week]
-    else:
-        display_df = df
-        
-    st.subheader(f"Activity Table ({selected_week})")
-    st.dataframe(display_df.drop(columns=["Post Count"]), use_container_width=True)
-    
-import plotly.express as px
-
-# ... (rest of the file remains the same until the performance overview section)
-
-with tab2:
-    selected_week = st.selectbox("Select Week", ["Combined", "Week 1", "Week 2"])
+    selected_week = st.selectbox("Select Week", ["Combined", "Week 1", "Week 2"], key="week_selector")
     
     if selected_week != "Combined":
         display_df = df[df["Week"] == selected_week]
