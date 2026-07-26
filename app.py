@@ -51,7 +51,7 @@ st.set_page_config(
 STAFF_LIST = [
     "Dato' Gilbert", "Mr Uthia Kumar Subramany", "Prof. Dr. Asif M Karim", 
     "Mrs. Gurvinder", "Mr. Muhammed Irfan A", "Ms. Rozmania", 
-    "Ms Leeni", "Mr SK", "Ms Nurul Fatiha", "Mrs. Vani", "Mr Jegen"
+    "Ms Lini", "Mr SK", "Ms Nurul Fatiha", "Mrs. Vani", "Mr Jegen"
 ]
 
 # Week 1 Data
@@ -62,7 +62,7 @@ data_w1 = {
     "Mrs. Gurvinder": {"FB": "-", "LinkedIn": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     "Mr. Muhammed Irfan A": {"FB": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "LinkedIn": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     "Ms. Rozmania": {"FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
-    "Ms Leeni": {"FB": "17th, 18th (Exec MBA, PhD(ODL), Prem MBA, Prem MSc ITM)", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    "Ms Lini": {"FB": "17th, 18th (Exec MBA, PhD(ODL), Prem MBA, Prem MSc ITM)", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL), Exec MBA, Prem MBA, Prem MSc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     "Mr SK": {"FB": "18th (PhD(ODL))", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "18th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     "Ms Nurul Fatiha": {"FB": "18th (Exec MBA, PhD(ODL))", "LinkedIn": "18th (Exec MBA, PhD(ODL), Prem MBA, Prem MSc ITM)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     "Mrs. Vani": {"FB": "18th (Exec MBA)", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
@@ -77,7 +77,7 @@ data_w2 = {
     "Mrs. Gurvinder": {"FB": "25th Prem Msc, 25th PhD", "LinkedIn": "25th Prem Msc, 25th PhD", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     "Mr. Muhammed Irfan A": {"FB": "25th Prem Msc, 18th, 25th PhD", "LinkedIn": "25th Prem Msc, 25th PhD", "Telegram": "25th Prem Msc", "WhatsApp Status": "23,24,25th Prem Msc, PhD", "WhatsApp Group": "-", "Instagram": "25th Prem Msc, 25th PhD", "Remarks": "-"},
     "Ms. Rozmania": {"FB": "24th Prem Msc, PhD", "LinkedIn": "24th Prem Msc, PhD", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
-    "Ms Leeni": {"FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "26th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    "Ms Lini": {"FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "26th (PhD(ODL))", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     "Mr SK": {"FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     "Ms Nurul Fatiha": {"FB": "22th Prem Msc, 22th PhD", "LinkedIn": "22th Prem Msc, 22th PhD", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
     "Mrs. Vani": {"FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "26h Prem Msc, 26h PhD", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
