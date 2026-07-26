@@ -35,17 +35,31 @@ tab1, tab2 = st.tabs(["🏠 Home", "📊 Marketing Tracker"])
 with tab1:
     st.title("🎓 Welcome, Valued Staff")
     st.write("---")
-    st.subheader("Your Impact Matters")
+    st.subheader("Why We Are Asia's Most Exclusive University")
     st.write("""
-    Thank you for your dedication to Binary University. As representatives of Asia's Most Exclusive University, 
-    your efforts in sharing our vision of producing 'Outstanding Talents' are invaluable. 
+    Binary University is not a mass-market institution. We are a specialized, boutique university committed to producing 'Outstanding Talents' who command premium compensation globally.
     
-    **Remember to emphasize:**
-    *   **Elite Education:** Specialized DBA, PhD, MBA, and MSc programs.
-    *   **Measurable Outcomes:** We focus on career readiness and premium industry placement.
-    *   **Research Excellence:** Our 8 Research Centres of Excellence drive innovation.
-    
-    You are key to our mission of nurturing industry leaders. Keep up the great work!
+    ### 🏆 The Premium Difference
+    *   **Exclusive Intake:** Strict limit of **45 students** per Master’s program, DBA, and PhD ensures personalized attention.
+    *   **Outcome-Oriented:** We focus on measurable professional outcomes, global mobility, and elite career preparation.
+    *   **Flagship Premium MBA:** Designed to give leaders a competitive edge with a curriculum that blends leadership, innovation, and global industry requirements.
+
+    ### ✨ Our 5 Premier USPs
+    1. **Industry-Relevant Curriculum:** Constantly updated to meet global market demands.
+    2. **Entrepreneurship Focus:** Entrepreneurial skills are embedded into our postgraduate DNA.
+    3. **Global Alumni Network:** Access to industry leaders worldwide.
+    4. **Research-Driven:** Deep academic insight through our specialized centres.
+    5. **Exclusive Environment:** Small class sizes foster high-level networking.
+
+    ### 🔬 8 Centres of Research Excellence
+    *   Centre for Artificial Intelligence and Data Analytics (CAIDA)
+    *   Asia Centre for Entrepreneurship (ACE)
+    *   Centre for Women Leadership (CWL)
+    *   Centre for Advancement of Management & Leadership (CAML)
+    *   Centre for Teaching and Learning (CTL)
+    *   Centre for Healthcare Management (CHM)
+    *   Centre for Social Entrepreneurship (CSE)
+    *   ICT Centre of Excellence
     """)
 
 with tab2:
