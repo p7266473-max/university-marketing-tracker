@@ -147,8 +147,11 @@ with tab2:
     
     st.divider()
     st.subheader(f"Performance Overview ({selected_week})")
-    # Plot using the filtered dataframe for the selected week
-    chart_data = display_df.groupby("Staff Name")["Post Count"].sum().reindex(STAFF_LIST)
+    # Plot using aggregated data if 'Combined', else use filtered data
+    if selected_week == "Combined":
+        chart_data = df.groupby("Staff Name")["Post Count"].sum().reindex(STAFF_LIST)
+    else:
+        chart_data = display_df.groupby("Staff Name")["Post Count"].sum().reindex(STAFF_LIST)
     st.bar_chart(chart_data)
 
 st.divider()
