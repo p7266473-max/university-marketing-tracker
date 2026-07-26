@@ -172,7 +172,7 @@ def desktop_tracker():
     return rx.desktop_only(
         rx.vstack(
             rx.heading("Marketing Activity Tracker", size="6", color=PRIMARY_NAVY),
-            rx.heading("Banner Ad Postings", size="4", color=PRIMARY_NAVY),
+            rx.heading("Binary Ad Postings", size="4", color=PRIMARY_NAVY),
             rx.text(State.week_dates, size="4", color=GOLD_ACCENT, weight="medium", margin_bottom="1em"),
             rx.select(["Week 1", "Week 2"], value=State.selected_week, on_change=State.set_selected_week),
             rx.box(
@@ -191,7 +191,7 @@ def mobile_tracker():
     return rx.mobile_and_tablet(
         rx.vstack(
             rx.heading("Activity Tracker", size="5", color=PRIMARY_NAVY),
-            rx.heading("Banner Ad Postings", size="3", color=PRIMARY_NAVY),
+            rx.heading("Binary Ad Postings", size="3", color=PRIMARY_NAVY),
             rx.text(State.week_dates, size="2", color=GOLD_ACCENT, weight="bold"),
             rx.select(["Week 1", "Week 2"], value=State.selected_week, on_change=State.set_selected_week),
             rx.scroll_area(
