@@ -1,12 +1,53 @@
 import streamlit as st
 import pandas as pd
 
+# Add nostalgic styling
+st.markdown("""
+<style>
+    /* Warm, nostalgic palette */
+    :root {
+        --bg-color: #fcfbf7;
+        --text-color: #3e3a35;
+        --accent-color: #8b5e3c;
+        --table-header: #dcd0c0;
+    }
+    
+    .stApp {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: 'Georgia', serif;
+    }
+    
+    h1, h2, h3 {
+        color: var(--accent-color);
+        font-family: 'Georgia', serif;
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 0.5rem;
+    }
+    
+    .stDataFrame {
+        border: 1px solid var(--table-header);
+    }
+    
+    /* Subtle polish */
+    .stButton>button {
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-family: 'Georgia', serif;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Set page config
 st.set_page_config(
-    page_title="University Staff Portal",
+    page_title="Binary University Staff Portal",
     page_icon="🎓",
     layout="wide",
 )
+
+# ... (data and processing remain the same)
 
 # Data
 data = [
