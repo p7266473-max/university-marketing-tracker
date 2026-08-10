@@ -50,10 +50,39 @@ WEEK_2_DATA = [
     {"Staff Name": "Mr Jegen", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": ""}
 ]
 
+WEEK_3_DATA = [
+    {"Staff Name": "Dato' Gilbert", "FB": "27th,30th (PhD(ODL) & FB Story", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "27th,30th (PhD(ODL)", "WhatsApp Group": "-", "Instagram": "27th,30th (PhD(ODL)", "Remarks": "-"},
+    {"Staff Name": "Mr Uthia Kumar Subramany", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "29th Prem Msc ITM)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Prof. Dr. Asif M Karim", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "02,03rd Premium MBA", "WhatsApp Group": "02,03rd Premium MBA", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mrs. Gurvinder", "FB": "-", "LinkedIn": "31st  Prem Msc ITM) 31st  (PhD(ODL)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mr. Muhammed Irfan A", "FB": "02nd Prem Msc ITM) 02nd (PhD(ODL)", "LinkedIn": "02nd Prem Msc ITM) 02nd (PhD(ODL)", "Telegram": "-", "WhatsApp Status": "02,03rd Prem Msc ITM) 02,03rd (PhD(ODL)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Ms. Rozmania", "FB": "28th, 30th Prem Msc ITM) 28th, 30th (PhD(ODL)", "LinkedIn": "28th, 30th Prem Msc ITM) 28th, 30th (PhD(ODL)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Ms Lini", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "02nd Prem Msc ITM) 02nd (PhD(ODL)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mr SK", "FB": "02nd Prem Msc ITM) 02nd (PhD(ODL)", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "02nd Prem Msc ITM) 02nd (PhD(ODL)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Ms Nurul Fatiha", "FB": "01tst Prem Msc ITM) 01st  (PhD(ODL)", "LinkedIn": "01tst Prem Msc ITM) 01st  (PhD(ODL)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mrs. Vani", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "02nd Prem Msc ITM) 02nd (PhD(ODL)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mr Jegen", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"}
+]
+
+WEEK_4_DATA = [
+    {"Staff Name": "Dato' Gilbert", "FB": "05th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "05th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "WhatsApp Group": "-", "Instagram": "05th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "Remarks": "-"},
+    {"Staff Name": "Mr Uthia Kumar Subramany", "FB": "-", "LinkedIn": "05th PHD (odl),Prem (Msc ITM)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Prof. Dr. Asif M Karim", "FB": "-", "LinkedIn": "08th Prem (Msc Edu Mgmt ODL)", "Telegram": "-", "WhatsApp Status": "08th Prem (Msc Edu Mgmt ODL)", "WhatsApp Group": "08th Prem (Msc Edu Mgmt ODL)", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mrs. Gurvinder", "FB": "06th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "LinkedIn": "06th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mr. Muhammed Irfan A", "FB": "-", "LinkedIn": "-", "Telegram": "09th, PHD (odl)", "WhatsApp Status": "09th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Ms. Rozmania", "FB": "05,07th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "LinkedIn": "05th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Ms Lini", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "09th PHD (odl),Prem (Msc ITM).", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mr SK", "FB": "09th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "09th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Ms Nurul Fatiha", "FB": "09th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "LinkedIn": "09th PHD (odl),Prem (Msc ITM). Prem (Msc Edu Mgmt ODL)", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mrs. Vani", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "09th PHD (odl)", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"},
+    {"Staff Name": "Mr Jegen", "FB": "-", "LinkedIn": "-", "Telegram": "-", "WhatsApp Status": "-", "WhatsApp Group": "-", "Instagram": "-", "Remarks": "-"}
+]
+
 def count_posts_in_string(text: str) -> int:
     if not text or text == "-": return 0
-    dates = re.findall(r"\b\d{1,2}(?:th|h|nd|rd)\b", text)
-    return len(dates) if dates else (1 if text.strip() else 0)
+    dates = re.findall(r"\b\d{1,2}(?:th|h|nd|rd|st|tst)\b", text)
+    extra_dates = re.findall(r"\b\d{1,2}(?=\s*,\s*\d{1,2}(?:th|h|nd|rd|st|tst)\b)", text)
+    return len(dates) + len(extra_dates) if (dates or extra_dates) else (1 if text.strip() else 0)
 
 # --- State Management ---
 class State(rx.State):
@@ -64,12 +93,16 @@ class State(rx.State):
     @rx.var
     def week_dates(self) -> str:
         if self.selected_week == "Week 1": return "July 17-18, 2026"
-        return "July 20-26, 2026"
+        elif self.selected_week == "Week 2": return "July 20-26, 2026"
+        elif self.selected_week == "Week 3": return "July 27 - Aug 02, 2026"
+        return "Aug 03-09, 2026"
 
     @rx.var
     def get_data(self) -> list[dict]:
         if self.selected_week == "Week 1": return WEEK_1_DATA
-        return WEEK_2_DATA
+        elif self.selected_week == "Week 2": return WEEK_2_DATA
+        elif self.selected_week == "Week 3": return WEEK_3_DATA
+        return WEEK_4_DATA
 
     @rx.var
     def get_chart_data(self) -> go.Figure:
@@ -185,7 +218,7 @@ def desktop_tracker():
             rx.heading("Marketing Activity Tracker", size="6", color=PRIMARY_NAVY),
             rx.heading("Binary Ad Postings", size="4", color=PRIMARY_NAVY),
             rx.text(State.week_dates, size="4", color=GOLD_ACCENT, weight="medium", margin_bottom="1em"),
-            rx.select(["Week 1", "Week 2"], value=State.selected_week, on_change=State.set_selected_week),
+            rx.select(["Week 1", "Week 2", "Week 3", "Week 4"], value=State.selected_week, on_change=State.set_selected_week),
             rx.box(
                 rx.table.root(
                     rx.table.header(rx.table.row(rx.table.column_header_cell("Staff"), rx.table.column_header_cell("FB"), rx.table.column_header_cell("LinkedIn"), rx.table.column_header_cell("Telegram"), rx.table.column_header_cell("WA Status"), rx.table.column_header_cell("WA Group"), rx.table.column_header_cell("Instagram"), rx.table.column_header_cell("Remarks"))),
@@ -204,7 +237,7 @@ def mobile_tracker():
             rx.heading("Activity Tracker", size="5", color=PRIMARY_NAVY),
             rx.heading("Binary Ad Postings", size="3", color=PRIMARY_NAVY),
             rx.text(State.week_dates, size="2", color=GOLD_ACCENT, weight="bold"),
-            rx.select(["Week 1", "Week 2"], value=State.selected_week, on_change=State.set_selected_week),
+            rx.select(["Week 1", "Week 2", "Week 3", "Week 4"], value=State.selected_week, on_change=State.set_selected_week),
             rx.scroll_area(
                 rx.vstack(
                     rx.foreach(State.get_data, lambda row: rx.card(
