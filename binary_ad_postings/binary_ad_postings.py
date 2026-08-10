@@ -86,7 +86,7 @@ def count_posts_in_string(text: str) -> int:
 
 # --- State Management ---
 class State(rx.State):
-    selected_week: str = "Week 1"
+    selected_week: str = "Week 4"
     @rx.event
     def set_selected_week(self, week: str): self.selected_week = week
     
@@ -218,7 +218,7 @@ def desktop_tracker():
             rx.heading("Marketing Activity Tracker", size="6", color=PRIMARY_NAVY),
             rx.heading("Binary Ad Postings", size="4", color=PRIMARY_NAVY),
             rx.text(State.week_dates, size="4", color=GOLD_ACCENT, weight="medium", margin_bottom="1em"),
-            rx.select(["Week 1", "Week 2", "Week 3", "Week 4"], value=State.selected_week, on_change=State.set_selected_week),
+            rx.select(["Week 4", "Week 3", "Week 2", "Week 1"], value=State.selected_week, on_change=State.set_selected_week),
             rx.box(
                 rx.table.root(
                     rx.table.header(rx.table.row(rx.table.column_header_cell("Staff"), rx.table.column_header_cell("FB"), rx.table.column_header_cell("LinkedIn"), rx.table.column_header_cell("Telegram"), rx.table.column_header_cell("WA Status"), rx.table.column_header_cell("WA Group"), rx.table.column_header_cell("Instagram"), rx.table.column_header_cell("Remarks"))),
@@ -237,7 +237,7 @@ def mobile_tracker():
             rx.heading("Activity Tracker", size="5", color=PRIMARY_NAVY),
             rx.heading("Binary Ad Postings", size="3", color=PRIMARY_NAVY),
             rx.text(State.week_dates, size="2", color=GOLD_ACCENT, weight="bold"),
-            rx.select(["Week 1", "Week 2", "Week 3", "Week 4"], value=State.selected_week, on_change=State.set_selected_week),
+            rx.select(["Week 4", "Week 3", "Week 2", "Week 1"], value=State.selected_week, on_change=State.set_selected_week),
             rx.scroll_area(
                 rx.vstack(
                     rx.foreach(State.get_data, lambda row: rx.card(
@@ -317,7 +317,7 @@ def index() -> rx.Component:
                 ), 
                 value="3"
             ),
-            default_value="1", width="100%", padding_x=["0.5em", "4em"],
+            default_value="2", width="100%", padding_x=["0.5em", "4em"],
         ),
         background_color=LIGHT_BG, min_height="100vh", width="100%",
     )
