@@ -246,6 +246,7 @@ def mobile_tracker():
                             rx.vstack(
                                 rx.hstack(rx.text("Facebook:", size="1", weight="bold", color=TEXT_MOBILE, width="100px"), rx.text(row["FB"], size="1", color=TEXT_MOBILE)),
                                 rx.hstack(rx.text("LinkedIn:", size="1", weight="bold", color=TEXT_MOBILE, width="100px"), rx.text(row["LinkedIn"], size="1", color=TEXT_MOBILE)),
+                                rx.hstack(rx.text("Telegram:", size="1", weight="bold", color=TEXT_MOBILE, width="100px"), rx.text(row["Telegram"], size="1", color=TEXT_MOBILE)),
                                 rx.hstack(rx.text("WA Status:", size="1", weight="bold", color=TEXT_MOBILE, width="100px"), rx.text(row["WhatsApp Status"], size="1", color=TEXT_MOBILE)),
                                 rx.hstack(rx.text("WA Group:", size="1", weight="bold", color=TEXT_MOBILE, width="100px"), rx.text(row["WhatsApp Group"], size="1", color=TEXT_MOBILE)),
                                 rx.hstack(rx.text("Instagram:", size="1", weight="bold", color=TEXT_MOBILE, width="100px"), rx.text(row["Instagram"], size="1", color=TEXT_MOBILE)),
