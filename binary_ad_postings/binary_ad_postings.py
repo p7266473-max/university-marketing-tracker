@@ -174,7 +174,7 @@ def desktop_overview():
             # Video player at the top
             rx.box(
                 rx.video(
-                    url="https://youtu.be/CFEqCGnQVk4",
+                    src="https://youtu.be/CFEqCGnQVk4",
                     width="100%",
                     height="auto",
                     controls=True,
@@ -216,7 +216,7 @@ def mobile_overview():
             # Video player at the top
             rx.box(
                 rx.video(
-                    url="https://youtu.be/CFEqCGnQVk4",
+                    src="https://youtu.be/CFEqCGnQVk4",
                     width="100%",
                     height="auto",
                     controls=True,
