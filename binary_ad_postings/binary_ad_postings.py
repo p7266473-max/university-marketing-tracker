@@ -171,7 +171,24 @@ def usp_card(title: str, description: str) -> rx.Component:
 def desktop_overview():
     return rx.desktop_only(
         rx.vstack(
-            rx.heading("Binary University Internal Marketing Team Dashboard", size="9", color=PRIMARY_NAVY),
+            # Video player at the top
+            rx.box(
+                rx.video(
+                    url="/final_ad_video.mp4",
+                    width="100%",
+                    height="auto",
+                    controls=True,
+                    playing=False,
+                    muted=True,
+                ),
+                width="100%",
+                max_width="800px",
+                border_radius="12px",
+                overflow="hidden",
+                box_shadow="0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+                margin_bottom="2em",
+            ),
+            rx.heading("Binary University Internal Marketing Team Dashboard", size="9", color=PRIMARY_NAVY, text_align="center"),
             rx.divider(border_color=GOLD_ACCENT, width="100px", border_width="4px", margin_y="1em"),
             executive_card("Why is Binary University Asia's Most Exclusive University?", rx.vstack(
                 rx.text("Unlike mass-market institutions, Binary University is a highly specialized, boutique university that strictly limits cohorts exclusively to 45 students per Master's, DBA, and PhD program.", color=TEXT_PRIMARY, size="3", font_style="italic"),
@@ -194,6 +211,22 @@ def desktop_overview():
 def mobile_overview():
     return rx.mobile_and_tablet(
         rx.vstack(
+            # Video player at the top
+            rx.box(
+                rx.video(
+                    url="/final_ad_video.mp4",
+                    width="100%",
+                    height="auto",
+                    controls=True,
+                    playing=False,
+                    muted=True,
+                ),
+                width="100%",
+                border_radius="8px",
+                overflow="hidden",
+                box_shadow="0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                margin_bottom="1.5em",
+            ),
             rx.heading("Internal Marketing Dashboard", size="6", color=PRIMARY_NAVY, text_align="center"),
             rx.divider(border_color=GOLD_ACCENT, width="60px", border_width="3px"),
             rx.card(
