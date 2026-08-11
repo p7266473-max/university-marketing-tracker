@@ -189,6 +189,8 @@ def desktop_overview():
                 margin_bottom="2em",
             ),
             rx.heading("Binary University Internal Marketing Team Dashboard", size="9", color=PRIMARY_NAVY, text_align="center"),
+            rx.text(State.week_dates, size="4", color=GOLD_ACCENT, weight="medium", margin_bottom="0.5em"),
+            rx.select(["Week 4", "Week 3", "Week 2", "Week 1"], value=State.selected_week, on_change=State.set_selected_week),
             rx.divider(border_color=GOLD_ACCENT, width="100px", border_width="4px", margin_y="1em"),
             executive_card("Why is Binary University Asia's Most Exclusive University?", rx.vstack(
                 rx.text("Unlike mass-market institutions, Binary University is a highly specialized, boutique university that strictly limits cohorts exclusively to 45 students per Master's, DBA, and PhD program.", color=TEXT_PRIMARY, size="3", font_style="italic"),
@@ -228,6 +230,8 @@ def mobile_overview():
                 margin_bottom="1.5em",
             ),
             rx.heading("Internal Marketing Dashboard", size="6", color=PRIMARY_NAVY, text_align="center"),
+            rx.text(State.week_dates, size="2", color=GOLD_ACCENT, weight="bold"),
+            rx.select(["Week 4", "Week 3", "Week 2", "Week 1"], value=State.selected_week, on_change=State.set_selected_week),
             rx.divider(border_color=GOLD_ACCENT, width="60px", border_width="3px"),
             rx.card(
                 rx.text("Asia's Most Exclusive University: Specialized boutique environment limited to 45 students per cohort.", size="2", font_style="italic", color=TEXT_MOBILE),
